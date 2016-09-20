@@ -13,6 +13,7 @@ $helper = $fb->getRedirectLoginHelper();
             'message' => "Hola Mundo",
         ];
         $fb->post('/feed', $linkData, $accessToken);
+        header("Location: index.php");
         
     } catch (Facebook\Exceptions\FacebookResponseException $e) {
         // When Graph returns an error
